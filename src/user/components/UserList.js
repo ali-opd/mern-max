@@ -1,18 +1,22 @@
 import React from 'react';
 
+import Card from '../../shared/components/UIElements/Card';
 import UserItem from './UserItem';
+
 import './UserList.css';
 
 export default function UserList({ items }) {
   if (items.length === 0) {
     return (
-      <div class="center">
-        <h2>No users found</h2>
+      <div className="center">
+        <Card>
+          <h2>No users found</h2>
+        </Card>
       </div>
     );
   }
   return (
-    <ul className="users-list">
+    <ul className="user-list">
       {items.map((item) => (
         <UserItem
           key={item.id}
