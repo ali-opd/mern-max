@@ -8,7 +8,7 @@ import './UserList.css';
 export default function UserList({ items }) {
   if (items.length === 0) {
     return (
-      <div className="center">
+      <div className='center'>
         <Card>
           <h2>No users found</h2>
         </Card>
@@ -16,14 +16,14 @@ export default function UserList({ items }) {
     );
   }
   return (
-    <ul className="user-list">
+    <ul className='user-list'>
       {items.map((item) => (
         <UserItem
           key={item.id}
           id={item.id}
           image={item.image}
           name={item.name}
-          placeCount={item.places}
+          placeCount={item.places.length}
         />
       ))}
     </ul>
